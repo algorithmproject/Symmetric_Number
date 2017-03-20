@@ -4,7 +4,7 @@ def get_next_symmetric_number(N):
     if re.match(r"^9+$", ''.join(map(str, N))):
         return map(int, str(int(''.join(map(str, N[::]))) + 2))
     # if N is a single number and lower than 9
-    if len(N) == 1 and (N >= 0 or n <= 8):
+    if len(N) == 1 and (N[0] >= 0 or N[0] <= 8):
         return [int(N[0]) + 1]
     # if N is a odd length number
     if len(N) % 2 != 0:
